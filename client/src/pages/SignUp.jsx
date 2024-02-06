@@ -2,7 +2,7 @@ import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-export default function SıgnUp() {
+export default function SignUp() {
   const navigate = useNavigate()
   const [errorMessage, setErrorMessage] =useState(null)
   const [loading, setLoading] = useState(false)
@@ -25,6 +25,7 @@ export default function SıgnUp() {
       })
       const data=await res.json()
       if(data.success ===false){
+        setLoading(false)
         return setErrorMessage(data.message)
       }
       setLoading(false)
