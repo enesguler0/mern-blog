@@ -1,7 +1,9 @@
 import React from 'react'
+import Search from './Search';
 
 export default function Projects() {
   return (
-    <div>Projects</div>
+    
+    <Search/>
   )
 }

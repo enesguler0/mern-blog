@@ -49,18 +49,18 @@ export default function SignIn() {
             Hukuk
         </Link>
         <p className='text-sm mt-5'>
-          Blog sayfası için GİRİŞ sayfası
+          Esas Hukuk için GİRİŞ sayfası
         </p>
         </div>
         {/* right */}
         <div className='flex-1'>
             <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
               <div>
-                <Label value='Your email'/>
-                <TextInput type='email' placeholder='esashukuk@gmail.com' id='email' onChange={handleChange}/>
+                <Label value='Email'/>
+                <TextInput type='email' placeholder='esashukukbolu@gmail.com' id='email' onChange={handleChange}/>
               </div>
               <div>
-                <Label value='Your password'/>
+                <Label value='Şifre'/>
                 <TextInput type='password' placeholder='*******' id='password' onChange={handleChange}/>
               </div>
               <Button gradientDuoTone='purpleToPink' type='submit' disabled={loading}>
@@ -70,7 +70,7 @@ export default function SignIn() {
                     <Spinner size='sm' />
                     <span className='pl-3'>Loading...</span>
                     </>
-                  ): 'Sign In'
+                  ): 'Giriş Yap'
                   } 
                     
                 
@@ -78,9 +78,9 @@ export default function SignIn() {
               <OAuth />
             </form>
             <div className='flex gap-2 text-sm mt-5'>
-              <span>Dont have an account?</span>
+              <span>Hesabınız yok mu?</span>
               <Link to='/sign-up' className='text-blue-500'>
-                Sign Up
+                Kaydol
               </Link>
             </div>
             {

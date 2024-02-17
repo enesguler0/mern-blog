@@ -203,8 +203,8 @@ export default function DashProfile() {
         }
       </form>
       <div className='text-red-700 flex justify-between mt-5'>
-        <span onClick={()=>setShowModal(true)} className='cursor-pointer'>Delete Account</span>
-        <span onClick={handleSignout} className='cursor-pointer'>Sign Out</span>
+        <span onClick={()=>setShowModal(true)} className='cursor-pointer'>Profili Sil</span>
+        <span onClick={handleSignout} className='cursor-pointer'>Çıkış Yap</span>
 
       </div>
       {updateUserSuccess && (
@@ -229,14 +229,14 @@ export default function DashProfile() {
               <HiOutlineExclamationCircle className='h-14 w-14 text-gray-400 
               dark:text-gray-200 mb-4 mx-auto'/>
               <h3 className='mb-5 text-lg text-gray-500 dark:text-gray-400'>
-                Are you sure you want to delete your account?
+                Hesabınız silmek istediğinize emin misiniz?
               </h3>
               <div className='flex justify-center gap-4'>
                 <Button color='failure' onClick={handleDeleteUser}>
-                  Yes, I'am sure
+                  Evet, eminim
                 </Button>
                 <Button color='gray' onClick={()=> setShowModal(false)}>
-                  No, cancel
+                  Hayır, iptal et
                 </Button>
               </div>
             </div>

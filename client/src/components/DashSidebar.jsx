@@ -49,20 +49,20 @@ export default function DashSidebar() {
           <Link to='/dashboard?tab=profile'>
             <Sidebar.Item active={tab==='profile'} icon={HiUser} label={currentUser.isAdmin ? 'Admin': 'User'} labelColor='dark'
             as='div'>
-              Profile
+              Profil
             </Sidebar.Item>
           </Link>
           {currentUser.isAdmin && (
             <Link to='/dashboard?tab=posts'>
               <Sidebar.Item avtive={tab ==='posts'} icon={HiDocumentText} as='div'>
-                Posts
+                Yazılar
               </Sidebar.Item>
             </Link>
           )}
           {currentUser.isAdmin && (
             <Link to='/dashboard?tab=users'>
               <Sidebar.Item avtive={tab ==='users'} icon={HiOutlineUserGroup} as='div'>
-                Users
+                Kullanıcılar
               </Sidebar.Item>
             </Link>
             
@@ -70,14 +70,14 @@ export default function DashSidebar() {
           {currentUser.isAdmin && (
             <Link to='/dashboard?tab=comments'>
               <Sidebar.Item avtive={tab ==='comments'} icon={HiAnnotation} as='div'>
-                Comments
+                Yorumlar
               </Sidebar.Item>
             </Link>
             
           )}
           
           <Sidebar.Item onClick={handleSignout}  icon={HiArrowSmRight} className='cursor-pointer' >
-            Sign Out
+            Çıkış Yap
           </Sidebar.Item>
         </Sidebar.ItemGroup>
       </Sidebar.Items>

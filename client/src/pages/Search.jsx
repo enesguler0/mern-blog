@@ -147,9 +147,9 @@ export default function Search() {
         </h1>
         <div className='p-7 flex flex-wrap gap-4'>
           {!loading && posts.length === 0 && (
-            <p className='text-xl text-gray-500'>No posts found.</p>
+            <p className='text-xl text-gray-500'>Bulunamadı.</p>
           )}
-          {loading && <p className='text-xl text-gray-500'>Loading...</p>}
+          {loading && <p className='text-xl text-gray-500'>Yükleniyor...</p>}
           {!loading &&
             posts &&
             posts.map((post) => <PostCard key={post._id} post={post} />)}
@@ -158,7 +158,7 @@ export default function Search() {
               onClick={handleShowMore}
               className='text-teal-500 text-lg hover:underline p-7 w-full'
             >
-              Show More
+              Daha fazla...
             </button>
           )}
         </div>

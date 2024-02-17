@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import CallToAction from '../components/CallToAction';
+import CallToActionArticles from '../components/CallToActionArticles';
 import { useEffect, useState } from 'react';
 import PostCard from '../components/PostCard';
+import Hero from '../components/Hero';
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -16,7 +17,7 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
+      {/* <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
         <h1 className='text-3xl font-bold lg:text-6xl'>Esas Hukuk & Avukatlık</h1>
         <p className='text-gray-500 text-xs sm:text-sm'>
         Hukuki ihtiyaçlarınız için doğru adrestesiniz. Bize ulaşın ve sizin için ne yapabileceğimizi öğrenin.
@@ -27,9 +28,10 @@ export default function Home() {
         >
           View all posts
         </Link>
-      </div>
-      <div className='p-3 bg-amber-100 dark:bg-slate-700'>
-        <CallToAction />
+      </div> */}
+      <Hero/>
+      <div className='p-3 bg-stone-300 dark:bg-slate-600'>
+        <CallToActionArticles />
       </div>
 
       <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7'>

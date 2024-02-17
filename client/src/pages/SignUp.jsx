@@ -49,22 +49,22 @@ export default function SignUp() {
             Hukuk
         </Link>
         <p className='text-sm mt-5'>
-          Blog sayfası için kayıt sayfası
+          Esas Hukuk için kayıt sayfası
         </p>
         </div>
         {/* right */}
         <div className='flex-1'>
             <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
               <div>
-                <Label value='Your username'/>
+                <Label value='Kullanıcı adı'/>
                 <TextInput type='text' placeholder='Username' id='username' onChange={handleChange}/>
               </div>
               <div>
-                <Label value='Your email'/>
+                <Label value='Email'/>
                 <TextInput type='email' placeholder='esashukuk@gmail.com' id='email' onChange={handleChange}/>
               </div>
               <div>
-                <Label value='Your password'/>
+                <Label value='Şifre'/>
                 <TextInput type='password' placeholder='Password' id='password' onChange={handleChange}/>
               </div>
               <Button gradientDuoTone='purpleToPink' type='submit' disabled={loading}>
@@ -72,9 +72,9 @@ export default function SignUp() {
                   loading ? (
                     <>
                     <Spinner size='sm' />
-                    <span className='pl-3'>Loading...</span>
+                    <span className='pl-3'>Yükleniyor...</span>
                     </>
-                  ): 'Sign Up'
+                  ): 'Kayıt Ol'
                   } 
                     
                 
@@ -84,7 +84,7 @@ export default function SignUp() {
             <div className='flex gap-2 text-sm mt-5'>
               <span>Have an account?</span>
               <Link to='/sign-in' className='text-blue-500'>
-                Sign In
+                Giriş
               </Link>
             </div>
             {
